@@ -32,6 +32,7 @@
 		F54DB5691993146000C78BF0 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB565199312C600C78BF0 /* Orbitron-Bold.ttf */; };
 		F54DB56A1993146000C78BF0 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB566199312C600C78BF0 /* Orbitron-Medium.ttf */; };
 		F54DB56B1993146000C78BF0 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB567199312C600C78BF0 /* Orbitron-Regular.ttf */; };
+		F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		F54DB565199312C600C78BF0 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Bold.ttf"; sourceTree = "<group>"; };
 		F54DB566199312C600C78BF0 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
 		F54DB567199312C600C78BF0 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
+		F57C87231994FC6A00ECA64A /* MSDProjectileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDProjectileNode.h; sourceTree = "<group>"; };
+		F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDProjectileNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */,
 				F50D7CA91994575C007AF3F8 /* MSDPlayerShip.h */,
 				F50D7CAA1994575C007AF3F8 /* MSDPlayerShip.m */,
+				F57C87231994FC6A00ECA64A /* MSDProjectileNode.h */,
+				F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				F50D7CA819945410007AF3F8 /* MSDGameplayScene.m in Sources */,
 				F537E85E1992FF0100E3BBC0 /* MSDViewController.m in Sources */,
 				F537E8611992FF0100E3BBC0 /* MSDTitleScene.m in Sources */,
+				F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

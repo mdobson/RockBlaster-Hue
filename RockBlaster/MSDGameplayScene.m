@@ -9,10 +9,12 @@
 #import "MSDGameplayScene.h"
 #import "MSDBackgroundNode.h"
 #import "MSDPlayerShip.h"
+#import "MSDProjectileNode.h"
 
 @interface MSDGameplayScene ()
 
 @property (nonatomic, retain) MSDBackgroundNode *background;
+@property (nonatomic, retain) MSDPlayerShip *ship;
 
 @end
 
@@ -24,10 +26,19 @@
         self.background = background;
         [self addChild:self.background];
 
-        MSDPlayerShip *ship = [MSDPlayerShip shipWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 150)];
-        [self addChild:ship];
+        self.ship = [MSDPlayerShip shipWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 150)];
+        [self addChild:self.ship];
     }
     return self;
+}
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    for (UITouch *touch in touches) {
+        CGPoint position = [touch locationInNode:self];
+        MSDProjectileNode *projectile = [MSDProjectileNode projectileNodeAtPosition:CGPointMake(self.ship.position.x, self.ship.position.y)];
+        [self addChild:projectile];
+        [projectile moveProjectileToPosition:CGPointMake(self.ship.position.x, self.frame.size.height + projectile.frame.size.height + 10)];
+    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {

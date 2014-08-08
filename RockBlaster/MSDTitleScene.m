@@ -54,7 +54,7 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     MSDGameplayScene *game = [MSDGameplayScene sceneWithSize:self.frame.size];
-    SKTransition *transition = [SKTransition doorsOpenVerticalWithDuration:0.5];
+    SKTransition *transition = [SKTransition doorsOpenHorizontalWithDuration:0.5];
     [self.view presentScene:game transition:transition];
 }
 
