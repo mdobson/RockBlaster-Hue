@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50D7CA819945410007AF3F8 /* MSDGameplayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */; };
+		F50D7CAB1994575C007AF3F8 /* MSDPlayerShip.m in Sources */ = {isa = PBXBuildFile; fileRef = F50D7CAA1994575C007AF3F8 /* MSDPlayerShip.m */; };
 		F537E8461992FF0100E3BBC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F537E8451992FF0100E3BBC0 /* Foundation.framework */; };
 		F537E8481992FF0100E3BBC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F537E8471992FF0100E3BBC0 /* CoreGraphics.framework */; };
 		F537E84A1992FF0100E3BBC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F537E8491992FF0100E3BBC0 /* UIKit.framework */; };
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F50D7CA619945410007AF3F8 /* MSDGameplayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDGameplayScene.h; sourceTree = "<group>"; };
+		F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDGameplayScene.m; sourceTree = "<group>"; };
+		F50D7CA91994575C007AF3F8 /* MSDPlayerShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDPlayerShip.h; sourceTree = "<group>"; };
+		F50D7CAA1994575C007AF3F8 /* MSDPlayerShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDPlayerShip.m; sourceTree = "<group>"; };
 		F537E8421992FF0100E3BBC0 /* RockBlaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockBlaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F537E8451992FF0100E3BBC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F537E8471992FF0100E3BBC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +156,10 @@
 				F537E8831993005800E3BBC0 /* MSDBackgroundNode.m */,
 				F54DB560199311EE00C78BF0 /* MSDTitleShipNode.h */,
 				F54DB561199311EE00C78BF0 /* MSDTitleShipNode.m */,
+				F50D7CA619945410007AF3F8 /* MSDGameplayScene.h */,
+				F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */,
+				F50D7CA91994575C007AF3F8 /* MSDPlayerShip.h */,
+				F50D7CAA1994575C007AF3F8 /* MSDPlayerShip.m */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -298,9 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F537E8541992FF0100E3BBC0 /* main.m in Sources */,
+				F50D7CAB1994575C007AF3F8 /* MSDPlayerShip.m in Sources */,
 				F54DB562199311EE00C78BF0 /* MSDTitleShipNode.m in Sources */,
 				F537E8581992FF0100E3BBC0 /* MSDAppDelegate.m in Sources */,
 				F537E8841993005800E3BBC0 /* MSDBackgroundNode.m in Sources */,
+				F50D7CA819945410007AF3F8 /* MSDGameplayScene.m in Sources */,
 				F537E85E1992FF0100E3BBC0 /* MSDViewController.m in Sources */,
 				F537E8611992FF0100E3BBC0 /* MSDTitleScene.m in Sources */,
 			);

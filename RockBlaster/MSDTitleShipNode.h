@@ -11,5 +11,7 @@
 @interface MSDTitleShipNode : SKSpriteNode
 
 + (instancetype) largeShipWithPosition:(CGPoint)position;
+- (void) animateShip;
+
 
 @end
