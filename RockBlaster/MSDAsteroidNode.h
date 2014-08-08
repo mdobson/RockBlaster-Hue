@@ -11,5 +11,5 @@
 @interface MSDAsteroidNode : SKSpriteNode
 
 + (instancetype) asteroidAtPosition:(CGPoint)position;
-
++ (instancetype) asteroidNode;
 @end

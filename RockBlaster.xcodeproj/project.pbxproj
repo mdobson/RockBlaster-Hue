@@ -34,6 +34,7 @@
 		F54DB56B1993146000C78BF0 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB567199312C600C78BF0 /* Orbitron-Regular.ttf */; };
 		F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */; };
 		F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872719950BF400ECA64A /* MSDAsteroidNode.m */; };
+		F57C872B19955A7D00ECA64A /* MSDBlasterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDProjectileNode.m; sourceTree = "<group>"; };
 		F57C872619950BF400ECA64A /* MSDAsteroidNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDAsteroidNode.h; sourceTree = "<group>"; };
 		F57C872719950BF400ECA64A /* MSDAsteroidNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDAsteroidNode.m; sourceTree = "<group>"; };
+		F57C872919955A7D00ECA64A /* MSDBlasterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDBlasterUtil.h; sourceTree = "<group>"; };
+		F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDBlasterUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */,
 				F57C872619950BF400ECA64A /* MSDAsteroidNode.h */,
 				F57C872719950BF400ECA64A /* MSDAsteroidNode.m */,
+				F57C872919955A7D00ECA64A /* MSDBlasterUtil.h */,
+				F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57C872B19955A7D00ECA64A /* MSDBlasterUtil.m in Sources */,
 				F537E8541992FF0100E3BBC0 /* main.m in Sources */,
 				F50D7CAB1994575C007AF3F8 /* MSDPlayerShipNode.m in Sources */,
 				F54DB562199311EE00C78BF0 /* MSDTitleShipNode.m in Sources */,

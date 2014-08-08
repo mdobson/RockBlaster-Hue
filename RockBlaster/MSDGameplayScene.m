@@ -10,11 +10,17 @@
 #import "MSDBackgroundNode.h"
 #import "MSDPlayerShipNode.h"
 #import "MSDProjectileNode.h"
+#import "MSDAsteroidNode.h"
+#import "MSDBlasterUtil.h"
 
 @interface MSDGameplayScene ()
 
 @property (nonatomic, retain) MSDBackgroundNode *background;
 @property (nonatomic, retain) MSDPlayerShipNode *ship;
+@property (nonatomic) NSTimeInterval lastAsteroidInterval;
+@property (nonatomic) NSTimeInterval asteroidInterval;
+@property (nonatomic) NSTimeInterval totalInterval;
+@property (nonatomic) NSTimeInterval lastUpdateInterval;
 
 @end
 
@@ -22,6 +28,7 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        self.asteroidInterval = 0.50;
         MSDBackgroundNode *background = [MSDBackgroundNode createBackgroundNodeWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
         self.background = background;
         [self addChild:self.background];
@@ -45,6 +52,26 @@
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     [self.background scrollBackground];
+    if (self.lastUpdateInterval) {
+        self.lastAsteroidInterval += currentTime - self.lastUpdateInterval;
+    }
+    
+    if (self.lastAsteroidInterval > self.asteroidInterval) {
+        [self addAsteroid];
+        self.lastAsteroidInterval = 0;
+    }
+    self.lastUpdateInterval = currentTime;
+    
+}
+
+- (void) addAsteroid{
+    MSDAsteroidNode *asteroid = [MSDAsteroidNode asteroidNode];
+    float dy = [MSDBlasterUtil randomWithMin:MSDAsteroidMinSpeed max:MSDAsteroidMaxSpeed];
+    asteroid.physicsBody.velocity = CGVectorMake(0, dy);
+    float y = self.frame.size.height + asteroid.frame.size.height;
+    float x = [MSDBlasterUtil randomWithMin:10+asteroid.size.width max:self.frame.size.width - asteroid.size.width - 10];
+    asteroid.position = CGPointMake(x, y);
+    [self addChild:asteroid];
 }
 
 @end
