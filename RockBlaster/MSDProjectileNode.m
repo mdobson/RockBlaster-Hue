@@ -12,6 +12,8 @@
 
 + (instancetype) projectileNodeAtPosition:(CGPoint)position {
     MSDProjectileNode *projectile = [self spriteNodeWithImageNamed:@"missile"];
+    projectile.xScale = 0.5;
+    projectile.yScale = 0.5;
     projectile.position = position;
     return projectile;
 }

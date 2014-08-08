@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Matthew Dobson. All rights reserved.
 //
 
-#import "MSDPlayerShip.h"
+#import "MSDPlayerShipNode.h"
 
-@implementation MSDPlayerShip
+@implementation MSDPlayerShipNode
 
 + (instancetype) shipWithPosition:(CGPoint)position {
-    MSDPlayerShip *ship = [self spriteNodeWithImageNamed:@"ship-small_01"];
+    MSDPlayerShipNode *ship = [self spriteNodeWithImageNamed:@"ship-small_01"];
     
     NSArray *textures = @[[SKTexture textureWithImageNamed:@"ship-small_01"],
                           [SKTexture textureWithImageNamed:@"ship-small_02"],

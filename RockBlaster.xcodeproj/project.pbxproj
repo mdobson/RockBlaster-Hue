@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F50D7CA819945410007AF3F8 /* MSDGameplayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */; };
-		F50D7CAB1994575C007AF3F8 /* MSDPlayerShip.m in Sources */ = {isa = PBXBuildFile; fileRef = F50D7CAA1994575C007AF3F8 /* MSDPlayerShip.m */; };
+		F50D7CAB1994575C007AF3F8 /* MSDPlayerShipNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F50D7CAA1994575C007AF3F8 /* MSDPlayerShipNode.m */; };
 		F537E8461992FF0100E3BBC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F537E8451992FF0100E3BBC0 /* Foundation.framework */; };
 		F537E8481992FF0100E3BBC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F537E8471992FF0100E3BBC0 /* CoreGraphics.framework */; };
 		F537E84A1992FF0100E3BBC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F537E8491992FF0100E3BBC0 /* UIKit.framework */; };
@@ -33,6 +33,7 @@
 		F54DB56A1993146000C78BF0 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB566199312C600C78BF0 /* Orbitron-Medium.ttf */; };
 		F54DB56B1993146000C78BF0 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB567199312C600C78BF0 /* Orbitron-Regular.ttf */; };
 		F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */; };
+		F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872719950BF400ECA64A /* MSDAsteroidNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,8 @@
 /* Begin PBXFileReference section */
 		F50D7CA619945410007AF3F8 /* MSDGameplayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDGameplayScene.h; sourceTree = "<group>"; };
 		F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDGameplayScene.m; sourceTree = "<group>"; };
-		F50D7CA91994575C007AF3F8 /* MSDPlayerShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDPlayerShip.h; sourceTree = "<group>"; };
-		F50D7CAA1994575C007AF3F8 /* MSDPlayerShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDPlayerShip.m; sourceTree = "<group>"; };
+		F50D7CA91994575C007AF3F8 /* MSDPlayerShipNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDPlayerShipNode.h; sourceTree = "<group>"; };
+		F50D7CAA1994575C007AF3F8 /* MSDPlayerShipNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDPlayerShipNode.m; sourceTree = "<group>"; };
 		F537E8421992FF0100E3BBC0 /* RockBlaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockBlaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F537E8451992FF0100E3BBC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F537E8471992FF0100E3BBC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +84,8 @@
 		F54DB567199312C600C78BF0 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
 		F57C87231994FC6A00ECA64A /* MSDProjectileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDProjectileNode.h; sourceTree = "<group>"; };
 		F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDProjectileNode.m; sourceTree = "<group>"; };
+		F57C872619950BF400ECA64A /* MSDAsteroidNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDAsteroidNode.h; sourceTree = "<group>"; };
+		F57C872719950BF400ECA64A /* MSDAsteroidNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDAsteroidNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +164,12 @@
 				F54DB561199311EE00C78BF0 /* MSDTitleShipNode.m */,
 				F50D7CA619945410007AF3F8 /* MSDGameplayScene.h */,
 				F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */,
-				F50D7CA91994575C007AF3F8 /* MSDPlayerShip.h */,
-				F50D7CAA1994575C007AF3F8 /* MSDPlayerShip.m */,
+				F50D7CA91994575C007AF3F8 /* MSDPlayerShipNode.h */,
+				F50D7CAA1994575C007AF3F8 /* MSDPlayerShipNode.m */,
 				F57C87231994FC6A00ECA64A /* MSDProjectileNode.h */,
 				F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */,
+				F57C872619950BF400ECA64A /* MSDAsteroidNode.h */,
+				F57C872719950BF400ECA64A /* MSDAsteroidNode.m */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -313,12 +318,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F537E8541992FF0100E3BBC0 /* main.m in Sources */,
-				F50D7CAB1994575C007AF3F8 /* MSDPlayerShip.m in Sources */,
+				F50D7CAB1994575C007AF3F8 /* MSDPlayerShipNode.m in Sources */,
 				F54DB562199311EE00C78BF0 /* MSDTitleShipNode.m in Sources */,
 				F537E8581992FF0100E3BBC0 /* MSDAppDelegate.m in Sources */,
 				F537E8841993005800E3BBC0 /* MSDBackgroundNode.m in Sources */,
 				F50D7CA819945410007AF3F8 /* MSDGameplayScene.m in Sources */,
 				F537E85E1992FF0100E3BBC0 /* MSDViewController.m in Sources */,
+				F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */,
 				F537E8611992FF0100E3BBC0 /* MSDTitleScene.m in Sources */,
 				F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */,
 			);

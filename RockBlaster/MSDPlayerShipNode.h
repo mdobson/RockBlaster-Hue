@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface MSDPlayerShip : SKSpriteNode
+@interface MSDPlayerShipNode : SKSpriteNode
 
 + (instancetype) shipWithPosition:(CGPoint)position;
 
