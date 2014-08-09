@@ -14,6 +14,7 @@
 + (instancetype) asteroidAtPosition:(CGPoint)position {
     MSDAsteroidNode *asteroid = [MSDAsteroidNode asteroidNode];
     asteroid.position = position;
+    asteroid.name = @"Asteroid";
     return asteroid;
 }
 
@@ -37,7 +38,7 @@
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.categoryBitMask = MSDCollisionCategoryEnemy;
-    self.physicsBody.collisionBitMask = 0;
+    self.physicsBody.collisionBitMask = MSDCollisionCategoryEnemy;
     self.physicsBody.contactTestBitMask = MSDCollisionCategoryProjectile;
 }
 

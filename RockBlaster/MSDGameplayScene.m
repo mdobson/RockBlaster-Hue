@@ -64,6 +64,12 @@
         }
     }];
     
+    [self enumerateChildNodesWithName:@"Asteroid" usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.y < 0) {
+            [node removeFromParent];
+        }
+    }];
+    
     [self.background scrollBackground];
     if (self.lastUpdateInterval) {
         self.lastAsteroidInterval += currentTime - self.lastUpdateInterval;
