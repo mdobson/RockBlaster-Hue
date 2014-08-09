@@ -14,6 +14,8 @@
 #import "MSDAsteroidNode.h"
 #import "MSDBlasterUtil.h"
 #import "MSDWallNode.h"
+#import "MSDGameState.h"
+#import "MSDHudNode.h"
 
 @interface MSDGameplayScene ()
 
@@ -24,6 +26,8 @@
 @property (nonatomic) NSTimeInterval totalInterval;
 @property (nonatomic) NSTimeInterval lastUpdateInterval;
 @property (nonatomic, retain) CMMotionManager *manager;
+@property (nonatomic, retain) MSDGameState *state;
+@property (nonatomic, retain) MSDHudNode *hud;
 
 @end
 
@@ -34,9 +38,8 @@
         self.asteroidInterval = 1.25;
         self.manager = [[CMMotionManager alloc] init];
         self.manager.deviceMotionUpdateInterval = 0.2;
-        
+        self.state = [MSDGameState gameStateWithLives:3 andScoreIncrement:10];
         self.physicsWorld.contactDelegate = self;
-        
         MSDBackgroundNode *background = [MSDBackgroundNode createBackgroundNodeWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
         self.background = background;
         [self addChild:self.background];
@@ -52,6 +55,10 @@
         rightWall.position = CGPointMake(CGRectGetMaxX(self.frame), 0);
         [self addChild:leftWall];
         [self addChild:rightWall];
+        self.hud = [MSDHudNode hudNodeWithPosition:CGPointMake(0, self.frame.size.height - 20) inFrame:self.frame withGameState:self.state];
+        self.state.delegate = self.hud;
+        [self addChild:self.hud];
+        
     }
     return self;
 }
@@ -137,6 +144,13 @@
         [self debrisAtPosition:contact.contactPoint];
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];
+        [self.state updateScore];
+    }
+    
+    if (firstBody.categoryBitMask == MSDCollisionCategoryEnemy && secondBody.categoryBitMask == MSDCollisionCategoryPlayer) {
+        [self debrisAtPosition:contact.contactPoint];
+        [firstBody.node removeFromParent];
+        [self.state removeLife];
     }
 }
 
