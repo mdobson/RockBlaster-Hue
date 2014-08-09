@@ -7,6 +7,7 @@
 //
 
 #import "MSDPlayerShipNode.h"
+#import "MSDBlasterUtil.h"
 
 @implementation MSDPlayerShipNode
 
@@ -28,6 +29,9 @@
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.allowsRotation = NO;
+    self.physicsBody.categoryBitMask = MSDCollisionCategoryPlayer;
+    self.physicsBody.collisionBitMask = 0;
+    self.physicsBody.contactTestBitMask = MSDCollisionCategoryEnemy;
 }
 
 @end

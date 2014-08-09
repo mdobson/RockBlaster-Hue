@@ -15,7 +15,7 @@ typedef NS_OPTIONS(uint32_t, MSDCollisionCategory) {
     MSDCollisionCategoryEnemy      = 1 << 0,
     MSDCollisionCategoryProjectile = 1 << 1,
     MSDCollisionCategoryDebris     = 1 << 2,
-    MSDCollisionCategoryGround     = 1 << 3
+    MSDCollisionCategoryPlayer     = 1 << 3
 };
 
 @interface MSDBlasterUtil : NSObject

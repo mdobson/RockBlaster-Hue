@@ -33,6 +33,9 @@
         self.asteroidInterval = 1.25;
         self.manager = [[CMMotionManager alloc] init];
         self.manager.deviceMotionUpdateInterval = 0.2;
+        
+        self.physicsWorld.contactDelegate = self;
+        
         MSDBackgroundNode *background = [MSDBackgroundNode createBackgroundNodeWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
         self.background = background;
         [self addChild:self.background];
@@ -86,13 +89,57 @@
         } else {
             float quat = motion.attitude.quaternion.y;
             if (quat > 0) {
-                NSLog(@"GREATER THAN 0: %f", quat);
+                //NSLog(@"GREATER THAN 0: %f", quat);
                 self.ship.physicsBody.velocity = CGVectorMake(450 * quat, 0);
             } else {
-                NSLog(@"LESS THAN 0: %f", quat);
+                //NSLog(@"LESS THAN 0: %f", quat);
                 self.ship.physicsBody.velocity = CGVectorMake(450 * quat, 0);
             }
         }
+    }];
+}
+
+- (void) didBeginContact:(SKPhysicsContact *)contact {
+    SKPhysicsBody *firstBody, *secondBody;
+    
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
+        firstBody = contact.bodyA;
+        secondBody = contact.bodyB;
+    } else {
+        firstBody = contact.bodyB;
+        secondBody = contact.bodyA;
+    }
+    
+    if (firstBody.categoryBitMask == MSDCollisionCategoryEnemy && secondBody.categoryBitMask == MSDCollisionCategoryProjectile) {
+        [self debrisAtPosition:contact.contactPoint];
+        [firstBody.node removeFromParent];
+        [secondBody.node removeFromParent];
+    }
+}
+
+- (void) debrisAtPosition:(CGPoint) position {
+    NSInteger numberOfPieces = [MSDBlasterUtil randomWithMin:5 max:10];
+    
+    for (int i = 0; i < numberOfPieces; i++) {
+        NSInteger randomPiece = [MSDBlasterUtil randomWithMin:1 max:11];
+        NSString *imageName = [NSString stringWithFormat:@"debris_%02d", randomPiece];
+        SKSpriteNode *debris = [SKSpriteNode spriteNodeWithImageNamed:imageName];
+        debris.position = position;
+        [self addChild:debris];
+        
+        debris.name = @"Debris";
+        debris.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:debris.frame.size];
+        debris.physicsBody.contactTestBitMask = 0;
+        debris.physicsBody.collisionBitMask = MSDCollisionCategoryDebris;
+        debris.physicsBody.velocity = CGVectorMake([MSDBlasterUtil randomWithMin:-150 max:150], [MSDBlasterUtil randomWithMin:-150 max:150]);
+    }
+    
+    NSString *explosionPath = [[NSBundle mainBundle] pathForResource:@"Explosion" ofType:@"sks"];
+    SKEmitterNode *explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath];
+    explosion.position = position;
+    [self addChild:explosion];
+    [explosion runAction:[SKAction waitForDuration:2.0] completion:^{
+        [explosion removeFromParent];
     }];
 }
 

@@ -34,6 +34,11 @@
 - (void) setupPhysics {
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.affectedByGravity = NO;
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+    self.physicsBody.affectedByGravity = NO;
+    self.physicsBody.categoryBitMask = MSDCollisionCategoryEnemy;
+    self.physicsBody.collisionBitMask = 0;
+    self.physicsBody.contactTestBitMask = MSDCollisionCategoryProjectile;
 }
 
 @end

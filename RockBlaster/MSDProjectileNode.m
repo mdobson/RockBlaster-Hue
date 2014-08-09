@@ -7,6 +7,7 @@
 //
 
 #import "MSDProjectileNode.h"
+#import "MSDBlasterUtil.h"
 
 @implementation MSDProjectileNode
 
@@ -15,12 +16,21 @@
     projectile.xScale = 0.5;
     projectile.yScale = 0.5;
     projectile.position = position;
+    [projectile setupPhysics];
     return projectile;
 }
 
 - (void) moveProjectileToPosition:(CGPoint)position {
     SKAction *move = [SKAction moveTo:position duration:1.0];
     [self runAction:move];
+}
+
+- (void) setupPhysics {
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+    self.physicsBody.affectedByGravity = NO;
+    self.physicsBody.categoryBitMask = MSDCollisionCategoryProjectile;
+    self.physicsBody.collisionBitMask = 0;
+    self.physicsBody.contactTestBitMask = MSDCollisionCategoryEnemy;
 }
 
 @end
