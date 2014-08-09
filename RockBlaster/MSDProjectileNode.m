@@ -16,6 +16,7 @@
     projectile.xScale = 0.5;
     projectile.yScale = 0.5;
     projectile.position = position;
+    projectile.name = @"Missle";
     [projectile setupPhysics];
     return projectile;
 }

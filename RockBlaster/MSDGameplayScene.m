@@ -58,6 +58,12 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    [self enumerateChildNodesWithName:@"Missle" usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.y > self.frame.size.height) {
+            [node removeFromParent];
+        }
+    }];
+    
     [self.background scrollBackground];
     if (self.lastUpdateInterval) {
         self.lastAsteroidInterval += currentTime - self.lastUpdateInterval;
