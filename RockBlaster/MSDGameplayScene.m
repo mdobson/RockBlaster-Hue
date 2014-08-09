@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Matthew Dobson. All rights reserved.
 //
 
+#import <CoreMotion/CoreMotion.h>
 #import "MSDGameplayScene.h"
 #import "MSDBackgroundNode.h"
 #import "MSDPlayerShipNode.h"
@@ -21,6 +22,7 @@
 @property (nonatomic) NSTimeInterval asteroidInterval;
 @property (nonatomic) NSTimeInterval totalInterval;
 @property (nonatomic) NSTimeInterval lastUpdateInterval;
+@property (nonatomic, retain) CMMotionManager *manager;
 
 @end
 
@@ -29,6 +31,8 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.asteroidInterval = 1.25;
+        self.manager = [[CMMotionManager alloc] init];
+        self.manager.deviceMotionUpdateInterval = 0.2;
         MSDBackgroundNode *background = [MSDBackgroundNode createBackgroundNodeWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
         self.background = background;
         [self addChild:self.background];
@@ -72,6 +76,24 @@
     float x = [MSDBlasterUtil randomWithMin:10+asteroid.size.width max:self.frame.size.width - asteroid.size.width - 10];
     asteroid.position = CGPointMake(x, y);
     [self addChild:asteroid];
+}
+
+
+- (void)didMoveToView:(SKView *)view {
+    [self.manager startDeviceMotionUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+        if (error) {
+            NSLog(@"Error:%@", error);
+        } else {
+            float quat = motion.attitude.quaternion.y;
+            if (quat > 0) {
+                NSLog(@"GREATER THAN 0: %f", quat);
+                self.ship.physicsBody.velocity = CGVectorMake(450 * quat, 0);
+            } else {
+                NSLog(@"LESS THAN 0: %f", quat);
+                self.ship.physicsBody.velocity = CGVectorMake(450 * quat, 0);
+            }
+        }
+    }];
 }
 
 @end

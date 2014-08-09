@@ -20,7 +20,14 @@
     SKAction *animate = [SKAction animateWithTextures:textures timePerFrame:0.2];
     [ship runAction:[SKAction repeatActionForever:animate]];
     ship.position = position;
+    [ship setupPhysics];
     return ship;
+}
+
+- (void) setupPhysics {
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+    self.physicsBody.affectedByGravity = NO;
+    self.physicsBody.allowsRotation = NO;
 }
 
 @end

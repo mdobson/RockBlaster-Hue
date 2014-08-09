@@ -35,6 +35,7 @@
 		F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */; };
 		F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872719950BF400ECA64A /* MSDAsteroidNode.m */; };
 		F57C872B19955A7D00ECA64A /* MSDBlasterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */; };
+		F57C872D19959E0400ECA64A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57C872C19959E0400ECA64A /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		F57C872719950BF400ECA64A /* MSDAsteroidNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDAsteroidNode.m; sourceTree = "<group>"; };
 		F57C872919955A7D00ECA64A /* MSDBlasterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDBlasterUtil.h; sourceTree = "<group>"; };
 		F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDBlasterUtil.m; sourceTree = "<group>"; };
+		F57C872C19959E0400ECA64A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57C872D19959E0400ECA64A /* CoreMotion.framework in Frameworks */,
 				F537E8481992FF0100E3BBC0 /* CoreGraphics.framework in Frameworks */,
 				F537E84A1992FF0100E3BBC0 /* UIKit.framework in Frameworks */,
 				F537E84C1992FF0100E3BBC0 /* SpriteKit.framework in Frameworks */,
@@ -138,6 +141,7 @@
 		F537E8441992FF0100E3BBC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F57C872C19959E0400ECA64A /* CoreMotion.framework */,
 				F537E8451992FF0100E3BBC0 /* Foundation.framework */,
 				F537E8471992FF0100E3BBC0 /* CoreGraphics.framework */,
 				F537E8491992FF0100E3BBC0 /* UIKit.framework */,
