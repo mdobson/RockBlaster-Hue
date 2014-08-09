@@ -99,13 +99,15 @@
         if (error) {
             NSLog(@"Error:%@", error);
         } else {
-            float quat = motion.attitude.quaternion.y;
-            if (quat > 0) {
+            //float quat = motion.attitude.quaternion.y;
+            double yaw = motion.attitude.yaw;
+            //NSLog(@"YAW:%f", yaw);
+            if (yaw < 0) {
                 //NSLog(@"GREATER THAN 0: %f", quat);
-                self.ship.physicsBody.velocity = CGVectorMake(450 * quat, 0);
+                self.ship.physicsBody.velocity = CGVectorMake(60 * yaw, 0);
             } else {
                 //NSLog(@"LESS THAN 0: %f", quat);
-                self.ship.physicsBody.velocity = CGVectorMake(450 * quat, 0);
+                self.ship.physicsBody.velocity = CGVectorMake(60 * yaw, 0);
             }
         }
     }];
