@@ -32,6 +32,7 @@
 		F54DB5691993146000C78BF0 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB565199312C600C78BF0 /* Orbitron-Bold.ttf */; };
 		F54DB56A1993146000C78BF0 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB566199312C600C78BF0 /* Orbitron-Medium.ttf */; };
 		F54DB56B1993146000C78BF0 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB567199312C600C78BF0 /* Orbitron-Regular.ttf */; };
+		F558A0DF1995C64E001D032F /* MSDWallNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F558A0DE1995C64E001D032F /* MSDWallNode.m */; };
 		F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */; };
 		F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872719950BF400ECA64A /* MSDAsteroidNode.m */; };
 		F57C872B19955A7D00ECA64A /* MSDBlasterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */; };
@@ -86,6 +87,8 @@
 		F54DB565199312C600C78BF0 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Bold.ttf"; sourceTree = "<group>"; };
 		F54DB566199312C600C78BF0 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
 		F54DB567199312C600C78BF0 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
+		F558A0DD1995C64E001D032F /* MSDWallNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDWallNode.h; sourceTree = "<group>"; };
+		F558A0DE1995C64E001D032F /* MSDWallNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDWallNode.m; sourceTree = "<group>"; };
 		F57C87231994FC6A00ECA64A /* MSDProjectileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDProjectileNode.h; sourceTree = "<group>"; };
 		F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDProjectileNode.m; sourceTree = "<group>"; };
 		F57C872619950BF400ECA64A /* MSDAsteroidNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDAsteroidNode.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */,
 				F57C872E1995A77000ECA64A /* Explosion.sks */,
 				F57C872F1995A77000ECA64A /* spark.png */,
+				F558A0DD1995C64E001D032F /* MSDWallNode.h */,
+				F558A0DE1995C64E001D032F /* MSDWallNode.m */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				F54DB562199311EE00C78BF0 /* MSDTitleShipNode.m in Sources */,
 				F537E8581992FF0100E3BBC0 /* MSDAppDelegate.m in Sources */,
 				F537E8841993005800E3BBC0 /* MSDBackgroundNode.m in Sources */,
+				F558A0DF1995C64E001D032F /* MSDWallNode.m in Sources */,
 				F50D7CA819945410007AF3F8 /* MSDGameplayScene.m in Sources */,
 				F537E85E1992FF0100E3BBC0 /* MSDViewController.m in Sources */,
 				F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */,

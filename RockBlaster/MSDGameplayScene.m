@@ -13,6 +13,7 @@
 #import "MSDProjectileNode.h"
 #import "MSDAsteroidNode.h"
 #import "MSDBlasterUtil.h"
+#import "MSDWallNode.h"
 
 @interface MSDGameplayScene ()
 
@@ -43,6 +44,14 @@
         self.ship = [MSDPlayerShipNode shipWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 150)];
         self.ship.zPosition = 10;
         [self addChild:self.ship];
+        
+        CGSize wallSize = CGSizeMake(1, self.frame.size.height);
+        MSDWallNode *leftWall = [MSDWallNode wallWithSize:wallSize];
+        MSDWallNode *rightWall = [MSDWallNode wallWithSize:wallSize];
+        leftWall.position = CGPointMake(CGRectGetMinX(self.frame), 0);
+        rightWall.position = CGPointMake(CGRectGetMaxX(self.frame), 0);
+        [self addChild:leftWall];
+        [self addChild:rightWall];
     }
     return self;
 }
@@ -145,6 +154,7 @@
         debris.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:debris.frame.size];
         debris.physicsBody.contactTestBitMask = 0;
         debris.physicsBody.collisionBitMask = MSDCollisionCategoryDebris;
+        debris.physicsBody.categoryBitMask = MSDCollisionCategoryDebris;
         debris.physicsBody.velocity = CGVectorMake([MSDBlasterUtil randomWithMin:-150 max:150], [MSDBlasterUtil randomWithMin:-150 max:150]);
     }
     

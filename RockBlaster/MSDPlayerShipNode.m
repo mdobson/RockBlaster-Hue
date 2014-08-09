@@ -30,7 +30,7 @@
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.allowsRotation = NO;
     self.physicsBody.categoryBitMask = MSDCollisionCategoryPlayer;
-    self.physicsBody.collisionBitMask = 0;
+    self.physicsBody.collisionBitMask = MSDCollisionCategoryWall;
     self.physicsBody.contactTestBitMask = MSDCollisionCategoryEnemy;
 }
 
