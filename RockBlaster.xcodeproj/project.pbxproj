@@ -36,6 +36,8 @@
 		F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872719950BF400ECA64A /* MSDAsteroidNode.m */; };
 		F57C872B19955A7D00ECA64A /* MSDBlasterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */; };
 		F57C872D19959E0400ECA64A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57C872C19959E0400ECA64A /* CoreMotion.framework */; };
+		F57C87301995A77000ECA64A /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = F57C872E1995A77000ECA64A /* Explosion.sks */; };
+		F57C87311995A77000ECA64A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F57C872F1995A77000ECA64A /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		F57C872919955A7D00ECA64A /* MSDBlasterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDBlasterUtil.h; sourceTree = "<group>"; };
 		F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDBlasterUtil.m; sourceTree = "<group>"; };
 		F57C872C19959E0400ECA64A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F57C872E1995A77000ECA64A /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		F57C872F1995A77000ECA64A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 				F57C872719950BF400ECA64A /* MSDAsteroidNode.m */,
 				F57C872919955A7D00ECA64A /* MSDBlasterUtil.h */,
 				F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */,
+				F57C872E1995A77000ECA64A /* Explosion.sks */,
+				F57C872F1995A77000ECA64A /* spark.png */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -305,9 +311,11 @@
 				F54DB56A1993146000C78BF0 /* Orbitron-Medium.ttf in Resources */,
 				F54DB56B1993146000C78BF0 /* Orbitron-Regular.ttf in Resources */,
 				F537E8521992FF0100E3BBC0 /* InfoPlist.strings in Resources */,
+				F57C87311995A77000ECA64A /* spark.png in Resources */,
 				F537E8651992FF0100E3BBC0 /* Images.xcassets in Resources */,
 				F537E8861993097F00E3BBC0 /* Sprites.atlas in Resources */,
 				F537E85B1992FF0100E3BBC0 /* Main.storyboard in Resources */,
+				F57C87301995A77000ECA64A /* Explosion.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
