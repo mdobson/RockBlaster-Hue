@@ -31,6 +31,9 @@
 @property (nonatomic, retain) MSDHudNode *hud;
 @property (nonatomic) BOOL restart;
 
+@property (nonatomic, retain) UIPanGestureRecognizer *dragGestureRecognizer;
+@property (nonatomic, retain) UITapGestureRecognizer *tapGestureRecognizer;
+
 @end
 
 @implementation MSDGameplayScene
@@ -77,18 +80,6 @@
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     //for (UITouch *touch in touches) {
         //CGPoint position = [touch locationInNode:self];
-        if (![self.state isGameover]) {
-            MSDProjectileNode *projectile = [MSDProjectileNode projectileNodeAtPosition:CGPointMake(self.ship.position.x, self.ship.size.height)];
-            [self addChild:projectile];
-            [projectile moveProjectileToPosition:CGPointMake(self.ship.position.x, self.frame.size.height + projectile.frame.size.height + 10)];
-        } else if (self.restart) {
-            for (SKNode *node in [self children]) {
-                [node removeFromParent];
-            }
-            
-            MSDGameplayScene *scene = [MSDGameplayScene sceneWithSize:self.view.bounds.size];
-            [self.view presentScene:scene];
-        }
     //}
 }
 
@@ -141,23 +132,57 @@
 
 
 - (void)didMoveToView:(SKView *)view {
-    [self.manager startDeviceMotionUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMDeviceMotion *motion, NSError *error) {
-        if (error) {
-            NSLog(@"Error:%@", error);
-        } else {
-            //float quat = motion.attitude.quaternion.y;
-            double yaw = motion.attitude.yaw;
-            //NSLog(@"YAW:%f", yaw);
-            if (yaw < 0) {
-                //NSLog(@"GREATER THAN 0: %f", quat);
-                self.ship.physicsBody.velocity = CGVectorMake(60 * yaw, 0);
+    if (NO) {
+        [self.manager startDeviceMotionUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+            if (error) {
+                NSLog(@"Error:%@", error);
             } else {
-                //NSLog(@"LESS THAN 0: %f", quat);
-                self.ship.physicsBody.velocity = CGVectorMake(60 * yaw, 0);
+                //float quat = motion.attitude.quaternion.y;
+                double yaw = motion.attitude.yaw;
+                //NSLog(@"YAW:%f", yaw);
+                if (yaw < 0) {
+                    //NSLog(@"GREATER THAN 0: %f", quat);
+                    self.ship.physicsBody.velocity = CGVectorMake(60 * yaw, 0);
+                } else {
+                    //NSLog(@"LESS THAN 0: %f", quat);
+                    self.ship.physicsBody.velocity = CGVectorMake(60 * yaw, 0);
+                }
             }
-        }
-    }];
+        }];
+    } else {
+        self.dragGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDrag:)];
+        [view addGestureRecognizer:self.dragGestureRecognizer];
+        
+        self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+        [view addGestureRecognizer:self.tapGestureRecognizer];
+    }
 }
+
+- (void) handleDrag:(UIPanGestureRecognizer*) recognizer{
+    CGPoint translation = [recognizer translationInView:self.view];
+    SKAction *move = [SKAction moveByX:translation.x y:0 duration:0];
+    [self.ship runAction:move];
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+}
+
+- (void) handleTap:(UITapGestureRecognizer*) recognizer{
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if (![self.state isGameover]) {
+            MSDProjectileNode *projectile = [MSDProjectileNode projectileNodeAtPosition:CGPointMake(self.ship.position.x, self.ship.size.height)];
+            [self addChild:projectile];
+            [projectile moveProjectileToPosition:CGPointMake(self.ship.position.x, self.frame.size.height + projectile.frame.size.height + 10)];
+        } else if (self.restart) {
+            for (SKNode *node in [self children]) {
+                [node removeFromParent];
+            }
+            
+            MSDGameplayScene *scene = [MSDGameplayScene sceneWithSize:self.view.bounds.size];
+            [self.view presentScene:scene];
+        }
+    }
+}
+
 
 - (void) didBeginContact:(SKPhysicsContact *)contact {
     SKPhysicsBody *firstBody, *secondBody;

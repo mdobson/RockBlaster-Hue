@@ -9,6 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 #import "MSDGameOverDelegate.h"
 
-@interface MSDGameplayScene : SKScene<SKPhysicsContactDelegate,MSDGameOverDelegate>
+@interface MSDGameplayScene : SKScene<SKPhysicsContactDelegate,MSDGameOverDelegate,UIGestureRecognizerDelegate>
 
 @end
