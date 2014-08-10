@@ -16,6 +16,7 @@
 #import "MSDWallNode.h"
 #import "MSDGameState.h"
 #import "MSDHudNode.h"
+#import "MSDGameOverNode.h"
 
 @interface MSDGameplayScene ()
 
@@ -28,6 +29,7 @@
 @property (nonatomic, retain) CMMotionManager *manager;
 @property (nonatomic, retain) MSDGameState *state;
 @property (nonatomic, retain) MSDHudNode *hud;
+@property (nonatomic) BOOL restart;
 
 @end
 
@@ -39,6 +41,7 @@
         self.manager = [[CMMotionManager alloc] init];
         self.manager.deviceMotionUpdateInterval = 0.2;
         self.state = [MSDGameState gameStateWithLives:3 andScoreIncrement:10];
+        self.restart = NO;
         self.physicsWorld.contactDelegate = self;
         MSDBackgroundNode *background = [MSDBackgroundNode createBackgroundNodeWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
         self.background = background;
@@ -56,19 +59,37 @@
         [self addChild:leftWall];
         [self addChild:rightWall];
         self.hud = [MSDHudNode hudNodeWithPosition:CGPointMake(0, self.frame.size.height - 20) inFrame:self.frame withGameState:self.state];
-        self.state.delegate = self.hud;
+        self.state.hudDelegate = self.hud;
+        self.state.gameOverDelegate = self;
         [self addChild:self.hud];
         
     }
     return self;
 }
 
+-(void) gameover {
+    [self debrisAtPosition:self.ship.position];
+    [self.ship removeFromParent];
+    MSDGameOverNode *gameOver = [MSDGameOverNode gameOverNodeWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
+    [self addChild:gameOver];
+    self.restart = YES;
+}
+
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *touch in touches) {
         //CGPoint position = [touch locationInNode:self];
-        MSDProjectileNode *projectile = [MSDProjectileNode projectileNodeAtPosition:CGPointMake(self.ship.position.x, self.ship.size.height)];
-        [self addChild:projectile];
-        [projectile moveProjectileToPosition:CGPointMake(self.ship.position.x, self.frame.size.height + projectile.frame.size.height + 10)];
+        if (![self.state isGameover]) {
+            MSDProjectileNode *projectile = [MSDProjectileNode projectileNodeAtPosition:CGPointMake(self.ship.position.x, self.ship.size.height)];
+            [self addChild:projectile];
+            [projectile moveProjectileToPosition:CGPointMake(self.ship.position.x, self.frame.size.height + projectile.frame.size.height + 10)];
+        } else if (self.restart) {
+            for (SKNode *node in [self children]) {
+                [node removeFromParent];
+            }
+            
+            MSDGameplayScene *scene = [MSDGameplayScene sceneWithSize:self.view.bounds.size];
+            [self.view presentScene:scene];
+        }
     }
 }
 
@@ -91,7 +112,7 @@
         self.lastAsteroidInterval += currentTime - self.lastUpdateInterval;
     }
     
-    if (self.lastAsteroidInterval > self.asteroidInterval) {
+    if (self.lastAsteroidInterval > self.asteroidInterval && ![self.state isGameover]) {
         [self addAsteroid];
         self.lastAsteroidInterval = 0;
     }

@@ -7,7 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "MSDGameOverDelegate.h"
 
-@interface MSDGameplayScene : SKScene<SKPhysicsContactDelegate>
+@interface MSDGameplayScene : SKScene<SKPhysicsContactDelegate,MSDGameOverDelegate>
 
 @end

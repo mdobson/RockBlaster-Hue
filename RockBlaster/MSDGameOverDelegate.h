@@ -1,5 +1,5 @@
 //
-//  MSDGameStateDelegate.h
+//  MSDGameOverDelegate.h
 //  RockBlaster
 //
 //  Created by Matthew Dobson on 8/9/14.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol MSDHudDelegate <NSObject>
+@protocol MSDGameOverDelegate <NSObject>
 
-- (void) livesChanged:(NSInteger)lives;
-
-- (void) scoreChanged:(NSInteger)score;
+- (void) gameover;
 
 @end

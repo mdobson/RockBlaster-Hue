@@ -10,7 +10,7 @@
 #import "MSDGameState.h"
 #import "MSDGameStateDelegate.h"
 
-@interface MSDHudNode : SKNode<MSDGameStateDelegate>
+@interface MSDHudNode : SKNode<MSDHudDelegate>
 
 + (instancetype) hudNodeWithPosition:(CGPoint)position inFrame:(CGRect) frame withGameState:(MSDGameState *)state ;
 
