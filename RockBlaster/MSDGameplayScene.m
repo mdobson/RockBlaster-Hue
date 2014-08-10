@@ -119,13 +119,13 @@
     self.lastUpdateInterval = currentTime;
     
     if (self.totalInterval > 120) {
-        self.lastAsteroidInterval = 0.50;
+        self.asteroidInterval = 0.50;
     } else if (self.totalInterval > 90) {
-        self.lastAsteroidInterval = 0.65;
+        self.asteroidInterval = 0.65;
     } else if (self.totalInterval > 60) {
-        self.lastAsteroidInterval = 0.75;
+        self.asteroidInterval = 0.75;
     } else if (self.totalInterval > 30) {
-        self.lastAsteroidInterval = 1.0;
+        self.asteroidInterval = 1.0;
     }
 }
 
