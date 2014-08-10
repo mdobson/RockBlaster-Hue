@@ -62,7 +62,6 @@
         self.state.hudDelegate = self.hud;
         self.state.gameOverDelegate = self;
         [self addChild:self.hud];
-        
     }
     return self;
 }
@@ -110,6 +109,7 @@
     [self.background scrollBackground];
     if (self.lastUpdateInterval) {
         self.lastAsteroidInterval += currentTime - self.lastUpdateInterval;
+        self.totalInterval += currentTime - self.lastUpdateInterval;
     }
     
     if (self.lastAsteroidInterval > self.asteroidInterval && ![self.state isGameover]) {
@@ -118,6 +118,15 @@
     }
     self.lastUpdateInterval = currentTime;
     
+    if (self.totalInterval > 120) {
+        self.lastAsteroidInterval = 0.50;
+    } else if (self.totalInterval > 90) {
+        self.lastAsteroidInterval = 0.65;
+    } else if (self.totalInterval > 60) {
+        self.lastAsteroidInterval = 0.75;
+    } else if (self.totalInterval > 30) {
+        self.lastAsteroidInterval = 1.0;
+    }
 }
 
 - (void) addAsteroid{
