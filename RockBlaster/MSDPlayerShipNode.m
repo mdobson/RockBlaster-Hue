@@ -19,6 +19,13 @@
                           [SKTexture textureWithImageNamed:@"ship-small_03"],
                           [SKTexture textureWithImageNamed:@"ship-small_04"]];
     SKAction *animate = [SKAction animateWithTextures:textures timePerFrame:0.2];
+    NSString *afterburnerPath = [[NSBundle mainBundle] pathForResource:@"Afterburner" ofType:@"sks"];
+    SKEmitterNode *afterburner = [NSKeyedUnarchiver unarchiveObjectWithFile:afterburnerPath];
+    afterburner.position = CGPointMake(CGRectGetMidX(ship.frame), CGRectGetMinY(ship.frame) + 10);
+    afterburner.zPosition = 15;
+    [ship addChild:afterburner];
+    
+    
     [ship runAction:[SKAction repeatActionForever:animate]];
     ship.position = position;
     [ship setupPhysics];

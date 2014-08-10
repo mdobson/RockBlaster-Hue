@@ -42,6 +42,7 @@
 		F57C87301995A77000ECA64A /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = F57C872E1995A77000ECA64A /* Explosion.sks */; };
 		F57C87311995A77000ECA64A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F57C872F1995A77000ECA64A /* spark.png */; };
 		F5B00725199709D100D5A9DF /* MSDGameOverNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B00724199709D100D5A9DF /* MSDGameOverNode.m */; };
+		F5B00727199718D700D5A9DF /* Afterburner.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5B00726199718D700D5A9DF /* Afterburner.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		F5B007221997084400D5A9DF /* MSDGameOverDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDGameOverDelegate.h; sourceTree = "<group>"; };
 		F5B00723199709D100D5A9DF /* MSDGameOverNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDGameOverNode.h; sourceTree = "<group>"; };
 		F5B00724199709D100D5A9DF /* MSDGameOverNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDGameOverNode.m; sourceTree = "<group>"; };
+		F5B00726199718D700D5A9DF /* Afterburner.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Afterburner.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				F5B007221997084400D5A9DF /* MSDGameOverDelegate.h */,
 				F5B00723199709D100D5A9DF /* MSDGameOverNode.h */,
 				F5B00724199709D100D5A9DF /* MSDGameOverNode.m */,
+				F5B00726199718D700D5A9DF /* Afterburner.sks */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				F54DB56A1993146000C78BF0 /* Orbitron-Medium.ttf in Resources */,
 				F54DB56B1993146000C78BF0 /* Orbitron-Regular.ttf in Resources */,
 				F537E8521992FF0100E3BBC0 /* InfoPlist.strings in Resources */,
+				F5B00727199718D700D5A9DF /* Afterburner.sks in Resources */,
 				F57C87311995A77000ECA64A /* spark.png in Resources */,
 				F537E8651992FF0100E3BBC0 /* Images.xcassets in Resources */,
 				F537E8861993097F00E3BBC0 /* Sprites.atlas in Resources */,
