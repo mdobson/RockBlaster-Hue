@@ -75,7 +75,7 @@
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
+    //for (UITouch *touch in touches) {
         //CGPoint position = [touch locationInNode:self];
         if (![self.state isGameover]) {
             MSDProjectileNode *projectile = [MSDProjectileNode projectileNodeAtPosition:CGPointMake(self.ship.position.x, self.ship.size.height)];
@@ -89,7 +89,7 @@
             MSDGameplayScene *scene = [MSDGameplayScene sceneWithSize:self.view.bounds.size];
             [self.view presentScene:scene];
         }
-    }
+    //}
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -189,7 +189,7 @@
     
     for (int i = 0; i < numberOfPieces; i++) {
         NSInteger randomPiece = [MSDBlasterUtil randomWithMin:1 max:11];
-        NSString *imageName = [NSString stringWithFormat:@"debris_%02d", randomPiece];
+        NSString *imageName = [NSString stringWithFormat:@"debris_%02d", (int)randomPiece];
         SKSpriteNode *debris = [SKSpriteNode spriteNodeWithImageNamed:imageName];
         debris.position = position;
         [self addChild:debris];
