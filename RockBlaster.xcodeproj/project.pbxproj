@@ -28,6 +28,7 @@
 		F537E8841993005800E3BBC0 /* MSDBackgroundNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F537E8831993005800E3BBC0 /* MSDBackgroundNode.m */; };
 		F537E8861993097F00E3BBC0 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F537E8851993097F00E3BBC0 /* Sprites.atlas */; };
 		F546CEF01997B95D00C301A2 /* EnemyAfterburner.sks in Resources */ = {isa = PBXBuildFile; fileRef = F546CEEE1997B95D00C301A2 /* EnemyAfterburner.sks */; };
+		F546CEF41997C63F00C301A2 /* MSDEnemyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F546CEF31997C63F00C301A2 /* MSDEnemyNode.m */; };
 		F54DB562199311EE00C78BF0 /* MSDTitleShipNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F54DB561199311EE00C78BF0 /* MSDTitleShipNode.m */; };
 		F54DB5681993146000C78BF0 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB564199312C600C78BF0 /* Orbitron-Black.ttf */; };
 		F54DB5691993146000C78BF0 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F54DB565199312C600C78BF0 /* Orbitron-Bold.ttf */; };
@@ -87,6 +88,8 @@
 		F537E8831993005800E3BBC0 /* MSDBackgroundNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDBackgroundNode.m; sourceTree = "<group>"; };
 		F537E8851993097F00E3BBC0 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		F546CEEE1997B95D00C301A2 /* EnemyAfterburner.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = EnemyAfterburner.sks; path = ../EnemyAfterburner.sks; sourceTree = "<group>"; };
+		F546CEF21997C63F00C301A2 /* MSDEnemyNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDEnemyNode.h; sourceTree = "<group>"; };
+		F546CEF31997C63F00C301A2 /* MSDEnemyNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDEnemyNode.m; sourceTree = "<group>"; };
 		F54DB560199311EE00C78BF0 /* MSDTitleShipNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDTitleShipNode.h; sourceTree = "<group>"; };
 		F54DB561199311EE00C78BF0 /* MSDTitleShipNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDTitleShipNode.m; sourceTree = "<group>"; };
 		F54DB564199312C600C78BF0 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				F5B00723199709D100D5A9DF /* MSDGameOverNode.h */,
 				F5B00724199709D100D5A9DF /* MSDGameOverNode.m */,
 				F5B00726199718D700D5A9DF /* Afterburner.sks */,
+				F546CEF21997C63F00C301A2 /* MSDEnemyNode.h */,
+				F546CEF31997C63F00C301A2 /* MSDEnemyNode.m */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F57C872B19955A7D00ECA64A /* MSDBlasterUtil.m in Sources */,
+				F546CEF41997C63F00C301A2 /* MSDEnemyNode.m in Sources */,
 				F537E8541992FF0100E3BBC0 /* main.m in Sources */,
 				F50D7CAB1994575C007AF3F8 /* MSDPlayerShipNode.m in Sources */,
 				F54DB562199311EE00C78BF0 /* MSDTitleShipNode.m in Sources */,

@@ -17,6 +17,7 @@
 #import "MSDGameState.h"
 #import "MSDHudNode.h"
 #import "MSDGameOverNode.h"
+#import "MSDEnemyNode.h"
 
 @interface MSDGameplayScene ()
 
@@ -65,6 +66,9 @@
         self.state.hudDelegate = self.hud;
         self.state.gameOverDelegate = self;
         [self addChild:self.hud];
+        
+        MSDEnemyNode *enemy = [MSDEnemyNode enemyWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
+        [self addChild:enemy];
     }
     return self;
 }
@@ -104,7 +108,7 @@
     }
     
     if (self.lastAsteroidInterval > self.asteroidInterval && ![self.state isGameover]) {
-        [self addAsteroid];
+        //[self addAsteroid];
         self.lastAsteroidInterval = 0;
     }
     self.lastUpdateInterval = currentTime;
