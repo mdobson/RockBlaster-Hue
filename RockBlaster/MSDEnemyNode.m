@@ -23,12 +23,17 @@
     afterburner.zPosition = 15;
     [enemy addChild:afterburner];
     
-
+    
     
     [enemy runAction:[SKAction repeatActionForever:animate]];
     SKAction *rotate = [SKAction rotateByAngle:M_PI duration:0];
     [enemy runAction:rotate];
     [afterburner runAction:rotate];
+    
+    SKAction *scaleDown = [SKAction scaleBy:0.80f duration:0];
+    
+    [enemy runAction:scaleDown];
+    [afterburner runAction:scaleDown];
     enemy.position = position;
 
     return enemy;
