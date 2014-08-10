@@ -179,47 +179,16 @@
 		F537E84D1992FF0100E3BBC0 /* RockBlaster */ = {
 			isa = PBXGroup;
 			children = (
-				F546CEEE1997B95D00C301A2 /* EnemyAfterburner.sks */,
+				F546CEFB1997CD3E00C301A2 /* AppJunk */,
+				F546CEFA1997CCCC00C301A2 /* Util */,
+				F546CEF91997CCB100C301A2 /* Scenes */,
+				F546CEF81997CCA800C301A2 /* State */,
+				F546CEF71997CC9E00C301A2 /* Delegates */,
+				F546CEF61997CC5300C301A2 /* Sprites */,
+				F546CEF51997CC3400C301A2 /* GameNodes */,
 				F54DB563199312BC00C78BF0 /* Fonts */,
-				F537E8561992FF0100E3BBC0 /* MSDAppDelegate.h */,
-				F537E8571992FF0100E3BBC0 /* MSDAppDelegate.m */,
-				F537E8591992FF0100E3BBC0 /* Main.storyboard */,
-				F537E85C1992FF0100E3BBC0 /* MSDViewController.h */,
-				F537E85D1992FF0100E3BBC0 /* MSDViewController.m */,
-				F537E85F1992FF0100E3BBC0 /* MSDTitleScene.h */,
-				F537E8601992FF0100E3BBC0 /* MSDTitleScene.m */,
-				F537E8851993097F00E3BBC0 /* Sprites.atlas */,
 				F537E8641992FF0100E3BBC0 /* Images.xcassets */,
 				F537E84E1992FF0100E3BBC0 /* Supporting Files */,
-				F537E8821993005800E3BBC0 /* MSDBackgroundNode.h */,
-				F537E8831993005800E3BBC0 /* MSDBackgroundNode.m */,
-				F54DB560199311EE00C78BF0 /* MSDTitleShipNode.h */,
-				F54DB561199311EE00C78BF0 /* MSDTitleShipNode.m */,
-				F50D7CA619945410007AF3F8 /* MSDGameplayScene.h */,
-				F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */,
-				F50D7CA91994575C007AF3F8 /* MSDPlayerShipNode.h */,
-				F50D7CAA1994575C007AF3F8 /* MSDPlayerShipNode.m */,
-				F57C87231994FC6A00ECA64A /* MSDProjectileNode.h */,
-				F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */,
-				F57C872619950BF400ECA64A /* MSDAsteroidNode.h */,
-				F57C872719950BF400ECA64A /* MSDAsteroidNode.m */,
-				F57C872919955A7D00ECA64A /* MSDBlasterUtil.h */,
-				F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */,
-				F57C872E1995A77000ECA64A /* Explosion.sks */,
-				F57C872F1995A77000ECA64A /* spark.png */,
-				F558A0DD1995C64E001D032F /* MSDWallNode.h */,
-				F558A0DE1995C64E001D032F /* MSDWallNode.m */,
-				F56EAA43199660BB008EBE96 /* MSDHudNode.h */,
-				F56EAA44199660BB008EBE96 /* MSDHudNode.m */,
-				F56EAA4619966122008EBE96 /* MSDGameState.h */,
-				F56EAA4719966122008EBE96 /* MSDGameState.m */,
-				F56EAA9319966679008EBE96 /* MSDGameStateDelegate.h */,
-				F5B007221997084400D5A9DF /* MSDGameOverDelegate.h */,
-				F5B00723199709D100D5A9DF /* MSDGameOverNode.h */,
-				F5B00724199709D100D5A9DF /* MSDGameOverNode.m */,
-				F5B00726199718D700D5A9DF /* Afterburner.sks */,
-				F546CEF21997C63F00C301A2 /* MSDEnemyNode.h */,
-				F546CEF31997C63F00C301A2 /* MSDEnemyNode.m */,
 			);
 			path = RockBlaster;
 			sourceTree = "<group>";
@@ -251,6 +220,93 @@
 				F537E8741992FF0200E3BBC0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F546CEF51997CC3400C301A2 /* GameNodes */ = {
+			isa = PBXGroup;
+			children = (
+				F537E8821993005800E3BBC0 /* MSDBackgroundNode.h */,
+				F537E8831993005800E3BBC0 /* MSDBackgroundNode.m */,
+				F54DB560199311EE00C78BF0 /* MSDTitleShipNode.h */,
+				F54DB561199311EE00C78BF0 /* MSDTitleShipNode.m */,
+				F50D7CA91994575C007AF3F8 /* MSDPlayerShipNode.h */,
+				F50D7CAA1994575C007AF3F8 /* MSDPlayerShipNode.m */,
+				F57C87231994FC6A00ECA64A /* MSDProjectileNode.h */,
+				F57C87241994FC6A00ECA64A /* MSDProjectileNode.m */,
+				F57C872619950BF400ECA64A /* MSDAsteroidNode.h */,
+				F57C872719950BF400ECA64A /* MSDAsteroidNode.m */,
+				F558A0DD1995C64E001D032F /* MSDWallNode.h */,
+				F558A0DE1995C64E001D032F /* MSDWallNode.m */,
+				F56EAA43199660BB008EBE96 /* MSDHudNode.h */,
+				F56EAA44199660BB008EBE96 /* MSDHudNode.m */,
+				F5B00723199709D100D5A9DF /* MSDGameOverNode.h */,
+				F5B00724199709D100D5A9DF /* MSDGameOverNode.m */,
+				F546CEF21997C63F00C301A2 /* MSDEnemyNode.h */,
+				F546CEF31997C63F00C301A2 /* MSDEnemyNode.m */,
+			);
+			name = GameNodes;
+			sourceTree = "<group>";
+		};
+		F546CEF61997CC5300C301A2 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				F537E8851993097F00E3BBC0 /* Sprites.atlas */,
+				F57C872F1995A77000ECA64A /* spark.png */,
+				F5B00726199718D700D5A9DF /* Afterburner.sks */,
+				F57C872E1995A77000ECA64A /* Explosion.sks */,
+				F546CEEE1997B95D00C301A2 /* EnemyAfterburner.sks */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		F546CEF71997CC9E00C301A2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F56EAA9319966679008EBE96 /* MSDGameStateDelegate.h */,
+				F5B007221997084400D5A9DF /* MSDGameOverDelegate.h */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		F546CEF81997CCA800C301A2 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				F56EAA4619966122008EBE96 /* MSDGameState.h */,
+				F56EAA4719966122008EBE96 /* MSDGameState.m */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		F546CEF91997CCB100C301A2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F537E85F1992FF0100E3BBC0 /* MSDTitleScene.h */,
+				F537E8601992FF0100E3BBC0 /* MSDTitleScene.m */,
+				F50D7CA619945410007AF3F8 /* MSDGameplayScene.h */,
+				F50D7CA719945410007AF3F8 /* MSDGameplayScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		F546CEFA1997CCCC00C301A2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F57C872919955A7D00ECA64A /* MSDBlasterUtil.h */,
+				F57C872A19955A7D00ECA64A /* MSDBlasterUtil.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		F546CEFB1997CD3E00C301A2 /* AppJunk */ = {
+			isa = PBXGroup;
+			children = (
+				F537E8561992FF0100E3BBC0 /* MSDAppDelegate.h */,
+				F537E8571992FF0100E3BBC0 /* MSDAppDelegate.m */,
+				F537E8591992FF0100E3BBC0 /* Main.storyboard */,
+				F537E85C1992FF0100E3BBC0 /* MSDViewController.h */,
+				F537E85D1992FF0100E3BBC0 /* MSDViewController.m */,
+			);
+			name = AppJunk;
 			sourceTree = "<group>";
 		};
 		F54DB563199312BC00C78BF0 /* Fonts */ = {
