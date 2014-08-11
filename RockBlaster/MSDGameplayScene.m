@@ -18,6 +18,10 @@
 #import "MSDHudNode.h"
 #import "MSDGameOverNode.h"
 #import "MSDEnemyNode.h"
+#import <HueSDK_iOS/HueSDK.h>
+
+#define RED 225
+#define BLUE 46500
 
 @interface MSDGameplayScene ()
 
@@ -66,7 +70,7 @@
         self.state.hudDelegate = self.hud;
         self.state.gameOverDelegate = self;
         [self addChild:self.hud];
-        
+        [self setLightsToColor:BLUE];
 //        MSDEnemyNode *enemy = [MSDEnemyNode enemyWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
 //        [self addChild:enemy];
     }
@@ -78,6 +82,7 @@
     [self.ship removeFromParent];
     MSDGameOverNode *gameOver = [MSDGameOverNode gameOverNodeWithPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
     [self addChild:gameOver];
+    [self setLightsToColor:RED];
     self.restart = YES;
 }
 
@@ -238,6 +243,29 @@
     [explosion runAction:[SKAction waitForDuration:2.0] completion:^{
         [explosion removeFromParent];
     }];
+}
+
+- (void) setLightsToColor:(int)code {
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    id<PHBridgeSendAPI> bridgeSendAPI = [[[PHOverallFactory alloc] init] bridgeSendAPI];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        [lightState setHue:[NSNumber numberWithInt:code]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLighState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+        }];
+    }
+
 }
 
 @end

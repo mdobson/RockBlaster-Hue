@@ -40,7 +40,7 @@
 
 - (void)localConnection{
     
-    [self loadConnectedBridgeValues];
+    //[self loadConnectedBridgeValues];
     
 }
 
@@ -68,8 +68,7 @@
             for (PHLight *light in cache.lights.allValues) {
                 
                 PHLightState *lightState = [[PHLightState alloc] init];
-                
-                [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+                [lightState setHue:[NSNumber numberWithInt:46500]];
                 [lightState setBrightness:[NSNumber numberWithInt:254]];
                 [lightState setSaturation:[NSNumber numberWithInt:254]];
                 
