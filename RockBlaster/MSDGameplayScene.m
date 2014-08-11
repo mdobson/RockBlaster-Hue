@@ -22,6 +22,8 @@
 
 #define RED 225
 #define BLUE 46500
+#define PURPLE 60000
+#define MAX_HUE 65535
 
 @interface MSDGameplayScene ()
 
@@ -209,6 +211,7 @@
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];
         [self.state updateScore];
+        [self randomLightToColor];
     }
     
     if (firstBody.categoryBitMask == MSDCollisionCategoryEnemy && secondBody.categoryBitMask == MSDCollisionCategoryPlayer) {
@@ -266,6 +269,29 @@
         }];
     }
 
+}
+
+- (void) randomLightToColor {
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    id<PHBridgeSendAPI> bridgeSendAPI = [[[PHOverallFactory alloc] init] bridgeSendAPI];
+    NSNumber *color = [NSNumber numberWithInt:arc4random() % MAX_HUE];
+    PHLight *light = cache.lights.allValues[[MSDBlasterUtil randomWithMin:1 max:cache.lights.allValues.count - 1]];
+    PHLightState *lightState = [[PHLightState alloc] init];
+    [lightState setHue:color];
+    [lightState setBrightness:[NSNumber numberWithInt:254]];
+    [lightState setSaturation:[NSNumber numberWithInt:254]];
+    
+    // Send lightstate to light
+    [bridgeSendAPI updateLightStateForId:light.identifier withLighState:lightState completionHandler:^(NSArray *errors) {
+        if (errors != nil) {
+            NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+            
+            NSLog(@"Response: %@",message);
+        }
+    }];
+    
+        
+    
 }
 
 @end
