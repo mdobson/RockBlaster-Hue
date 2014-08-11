@@ -43,6 +43,22 @@
 		F57C872D19959E0400ECA64A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57C872C19959E0400ECA64A /* CoreMotion.framework */; };
 		F57C87301995A77000ECA64A /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = F57C872E1995A77000ECA64A /* Explosion.sks */; };
 		F57C87311995A77000ECA64A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F57C872F1995A77000ECA64A /* spark.png */; };
+		F584FABF1998385E00B85C8D /* PHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FAB41998385E00B85C8D /* PHLoadingViewController.m */; };
+		F584FAC01998385E00B85C8D /* PHLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F584FAB51998385E00B85C8D /* PHLoadingViewController.xib */; };
+		F584FAC11998385E00B85C8D /* PHBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FAB71998385E00B85C8D /* PHBridgePushLinkViewController.m */; };
+		F584FAC21998385E00B85C8D /* PHBridgePushLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F584FAB81998385E00B85C8D /* PHBridgePushLinkViewController.xib */; };
+		F584FAC31998385E00B85C8D /* PHBridgeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FABA1998385E00B85C8D /* PHBridgeSelectionViewController.m */; };
+		F584FAC41998385E00B85C8D /* PHBridgeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F584FABB1998385E00B85C8D /* PHBridgeSelectionViewController.xib */; };
+		F584FAC51998385E00B85C8D /* press_smartbridge.png in Resources */ = {isa = PBXBuildFile; fileRef = F584FABD1998385E00B85C8D /* press_smartbridge.png */; };
+		F584FAC61998385E00B85C8D /* press_smartbridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F584FABE1998385E00B85C8D /* press_smartbridge@2x.png */; };
+		F584FAC819983B4400B85C8D /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F584FAC719983B4400B85C8D /* HueSDK_iOS.framework */; };
+		F584FAE9199848D600B85C8D /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FADB199848D600B85C8D /* DDAbstractDatabaseLogger.m */; };
+		F584FAEA199848D600B85C8D /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FADD199848D600B85C8D /* DDASLLogger.m */; };
+		F584FAEB199848D600B85C8D /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FADF199848D600B85C8D /* DDFileLogger.m */; };
+		F584FAEC199848D600B85C8D /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FAE1199848D600B85C8D /* DDLog.m */; };
+		F584FAED199848D600B85C8D /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FAE3199848D600B85C8D /* DDTTYLogger.m */; };
+		F584FAEE199848D600B85C8D /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FAE6199848D600B85C8D /* ContextFilterLogFormatter.m */; };
+		F584FAEF199848D600B85C8D /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F584FAE8199848D600B85C8D /* DispatchQueueLogFormatter.m */; };
 		F5B00725199709D100D5A9DF /* MSDGameOverNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B00724199709D100D5A9DF /* MSDGameOverNode.m */; };
 		F5B00727199718D700D5A9DF /* Afterburner.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5B00726199718D700D5A9DF /* Afterburner.sks */; };
 /* End PBXBuildFile section */
@@ -112,6 +128,46 @@
 		F57C872C19959E0400ECA64A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F57C872E1995A77000ECA64A /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		F57C872F1995A77000ECA64A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F584FAB31998385E00B85C8D /* PHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoadingViewController.h; sourceTree = "<group>"; };
+		F584FAB41998385E00B85C8D /* PHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoadingViewController.m; sourceTree = "<group>"; };
+		F584FAB51998385E00B85C8D /* PHLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoadingViewController.xib; sourceTree = "<group>"; };
+		F584FAB61998385E00B85C8D /* PHBridgePushLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBridgePushLinkViewController.h; sourceTree = "<group>"; };
+		F584FAB71998385E00B85C8D /* PHBridgePushLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBridgePushLinkViewController.m; sourceTree = "<group>"; };
+		F584FAB81998385E00B85C8D /* PHBridgePushLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHBridgePushLinkViewController.xib; sourceTree = "<group>"; };
+		F584FAB91998385E00B85C8D /* PHBridgeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBridgeSelectionViewController.h; sourceTree = "<group>"; };
+		F584FABA1998385E00B85C8D /* PHBridgeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBridgeSelectionViewController.m; sourceTree = "<group>"; };
+		F584FABB1998385E00B85C8D /* PHBridgeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHBridgeSelectionViewController.xib; sourceTree = "<group>"; };
+		F584FABD1998385E00B85C8D /* press_smartbridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press_smartbridge.png; sourceTree = "<group>"; };
+		F584FABE1998385E00B85C8D /* press_smartbridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "press_smartbridge@2x.png"; sourceTree = "<group>"; };
+		F584FAC719983B4400B85C8D /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HueSDK_iOS.framework; path = "../../Downloads/PhilipsHueSDK-iOS-OSX-master/HueSDK_iOS.framework"; sourceTree = "<group>"; };
+		F584FACA199848BF00B85C8D /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		F584FACB199848BF00B85C8D /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		F584FACC199848BF00B85C8D /* DDASLLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		F584FACD199848BF00B85C8D /* DDASLLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		F584FACE199848BF00B85C8D /* DDFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		F584FACF199848BF00B85C8D /* DDFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		F584FAD0199848BF00B85C8D /* DDLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		F584FAD1199848BF00B85C8D /* DDLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		F584FAD2199848BF00B85C8D /* DDTTYLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		F584FAD3199848BF00B85C8D /* DDTTYLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		F584FAD5199848BF00B85C8D /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		F584FAD6199848BF00B85C8D /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		F584FAD7199848BF00B85C8D /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		F584FAD8199848BF00B85C8D /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		F584FADA199848D600B85C8D /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		F584FADB199848D600B85C8D /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		F584FADC199848D600B85C8D /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		F584FADD199848D600B85C8D /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		F584FADE199848D600B85C8D /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		F584FADF199848D600B85C8D /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		F584FAE0199848D600B85C8D /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		F584FAE1199848D600B85C8D /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		F584FAE2199848D600B85C8D /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		F584FAE3199848D600B85C8D /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		F584FAE5199848D600B85C8D /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		F584FAE6199848D600B85C8D /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		F584FAE7199848D600B85C8D /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		F584FAE8199848D600B85C8D /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		F5B007221997084400D5A9DF /* MSDGameOverDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDGameOverDelegate.h; sourceTree = "<group>"; };
 		F5B00723199709D100D5A9DF /* MSDGameOverNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDGameOverNode.h; sourceTree = "<group>"; };
 		F5B00724199709D100D5A9DF /* MSDGameOverNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDGameOverNode.m; sourceTree = "<group>"; };
@@ -123,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F584FAC819983B4400B85C8D /* HueSDK_iOS.framework in Frameworks */,
 				F57C872D19959E0400ECA64A /* CoreMotion.framework in Frameworks */,
 				F537E8481992FF0100E3BBC0 /* CoreGraphics.framework in Frameworks */,
 				F537E84A1992FF0100E3BBC0 /* UIKit.framework in Frameworks */,
@@ -166,6 +223,8 @@
 		F537E8441992FF0100E3BBC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F584FAC9199848BF00B85C8D /* Lumberjack */,
+				F584FAC719983B4400B85C8D /* HueSDK_iOS.framework */,
 				F57C872C19959E0400ECA64A /* CoreMotion.framework */,
 				F537E8451992FF0100E3BBC0 /* Foundation.framework */,
 				F537E8471992FF0100E3BBC0 /* CoreGraphics.framework */,
@@ -179,6 +238,7 @@
 		F537E84D1992FF0100E3BBC0 /* RockBlaster */ = {
 			isa = PBXGroup;
 			children = (
+				F584FAB11998385E00B85C8D /* SDKWizard */,
 				F546CEFB1997CD3E00C301A2 /* AppJunk */,
 				F546CEFA1997CCCC00C301A2 /* Util */,
 				F546CEF91997CCB100C301A2 /* Scenes */,
@@ -320,6 +380,100 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		F584FAB11998385E00B85C8D /* SDKWizard */ = {
+			isa = PBXGroup;
+			children = (
+				F584FAD9199848D600B85C8D /* Lumberjack */,
+				F584FAB21998385E00B85C8D /* LoadingView */,
+				F584FAB61998385E00B85C8D /* PHBridgePushLinkViewController.h */,
+				F584FAB71998385E00B85C8D /* PHBridgePushLinkViewController.m */,
+				F584FAB81998385E00B85C8D /* PHBridgePushLinkViewController.xib */,
+				F584FAB91998385E00B85C8D /* PHBridgeSelectionViewController.h */,
+				F584FABA1998385E00B85C8D /* PHBridgeSelectionViewController.m */,
+				F584FABB1998385E00B85C8D /* PHBridgeSelectionViewController.xib */,
+				F584FABC1998385E00B85C8D /* Resources */,
+			);
+			path = SDKWizard;
+			sourceTree = "<group>";
+		};
+		F584FAB21998385E00B85C8D /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				F584FAB31998385E00B85C8D /* PHLoadingViewController.h */,
+				F584FAB41998385E00B85C8D /* PHLoadingViewController.m */,
+				F584FAB51998385E00B85C8D /* PHLoadingViewController.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		F584FABC1998385E00B85C8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F584FABD1998385E00B85C8D /* press_smartbridge.png */,
+				F584FABE1998385E00B85C8D /* press_smartbridge@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F584FAC9199848BF00B85C8D /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				F584FACA199848BF00B85C8D /* DDAbstractDatabaseLogger.h */,
+				F584FACB199848BF00B85C8D /* DDAbstractDatabaseLogger.m */,
+				F584FACC199848BF00B85C8D /* DDASLLogger.h */,
+				F584FACD199848BF00B85C8D /* DDASLLogger.m */,
+				F584FACE199848BF00B85C8D /* DDFileLogger.h */,
+				F584FACF199848BF00B85C8D /* DDFileLogger.m */,
+				F584FAD0199848BF00B85C8D /* DDLog.h */,
+				F584FAD1199848BF00B85C8D /* DDLog.m */,
+				F584FAD2199848BF00B85C8D /* DDTTYLogger.h */,
+				F584FAD3199848BF00B85C8D /* DDTTYLogger.m */,
+				F584FAD4199848BF00B85C8D /* Extensions */,
+			);
+			name = Lumberjack;
+			path = "../../Downloads/PhilipsHueSDK-iOS-OSX-master/Lumberjack";
+			sourceTree = "<group>";
+		};
+		F584FAD4199848BF00B85C8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F584FAD5199848BF00B85C8D /* ContextFilterLogFormatter.h */,
+				F584FAD6199848BF00B85C8D /* ContextFilterLogFormatter.m */,
+				F584FAD7199848BF00B85C8D /* DispatchQueueLogFormatter.h */,
+				F584FAD8199848BF00B85C8D /* DispatchQueueLogFormatter.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F584FAD9199848D600B85C8D /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				F584FADA199848D600B85C8D /* DDAbstractDatabaseLogger.h */,
+				F584FADB199848D600B85C8D /* DDAbstractDatabaseLogger.m */,
+				F584FADC199848D600B85C8D /* DDASLLogger.h */,
+				F584FADD199848D600B85C8D /* DDASLLogger.m */,
+				F584FADE199848D600B85C8D /* DDFileLogger.h */,
+				F584FADF199848D600B85C8D /* DDFileLogger.m */,
+				F584FAE0199848D600B85C8D /* DDLog.h */,
+				F584FAE1199848D600B85C8D /* DDLog.m */,
+				F584FAE2199848D600B85C8D /* DDTTYLogger.h */,
+				F584FAE3199848D600B85C8D /* DDTTYLogger.m */,
+				F584FAE4199848D600B85C8D /* Extensions */,
+			);
+			path = Lumberjack;
+			sourceTree = "<group>";
+		};
+		F584FAE4199848D600B85C8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F584FAE5199848D600B85C8D /* ContextFilterLogFormatter.h */,
+				F584FAE6199848D600B85C8D /* ContextFilterLogFormatter.m */,
+				F584FAE7199848D600B85C8D /* DispatchQueueLogFormatter.h */,
+				F584FAE8199848D600B85C8D /* DispatchQueueLogFormatter.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,15 +552,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54DB5681993146000C78BF0 /* Orbitron-Black.ttf in Resources */,
+				F584FAC61998385E00B85C8D /* press_smartbridge@2x.png in Resources */,
 				F546CEF01997B95D00C301A2 /* EnemyAfterburner.sks in Resources */,
 				F54DB5691993146000C78BF0 /* Orbitron-Bold.ttf in Resources */,
 				F54DB56A1993146000C78BF0 /* Orbitron-Medium.ttf in Resources */,
 				F54DB56B1993146000C78BF0 /* Orbitron-Regular.ttf in Resources */,
+				F584FAC01998385E00B85C8D /* PHLoadingViewController.xib in Resources */,
 				F537E8521992FF0100E3BBC0 /* InfoPlist.strings in Resources */,
+				F584FAC21998385E00B85C8D /* PHBridgePushLinkViewController.xib in Resources */,
+				F584FAC51998385E00B85C8D /* press_smartbridge.png in Resources */,
 				F5B00727199718D700D5A9DF /* Afterburner.sks in Resources */,
 				F57C87311995A77000ECA64A /* spark.png in Resources */,
 				F537E8651992FF0100E3BBC0 /* Images.xcassets in Resources */,
 				F537E8861993097F00E3BBC0 /* Sprites.atlas in Resources */,
+				F584FAC41998385E00B85C8D /* PHBridgeSelectionViewController.xib in Resources */,
 				F537E85B1992FF0100E3BBC0 /* Main.storyboard in Resources */,
 				F57C87301995A77000ECA64A /* Explosion.sks in Resources */,
 			);
@@ -428,19 +587,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				F57C872B19955A7D00ECA64A /* MSDBlasterUtil.m in Sources */,
+				F584FAEB199848D600B85C8D /* DDFileLogger.m in Sources */,
+				F584FABF1998385E00B85C8D /* PHLoadingViewController.m in Sources */,
 				F546CEF41997C63F00C301A2 /* MSDEnemyNode.m in Sources */,
 				F537E8541992FF0100E3BBC0 /* main.m in Sources */,
 				F50D7CAB1994575C007AF3F8 /* MSDPlayerShipNode.m in Sources */,
+				F584FAEA199848D600B85C8D /* DDASLLogger.m in Sources */,
 				F54DB562199311EE00C78BF0 /* MSDTitleShipNode.m in Sources */,
+				F584FAEE199848D600B85C8D /* ContextFilterLogFormatter.m in Sources */,
 				F537E8581992FF0100E3BBC0 /* MSDAppDelegate.m in Sources */,
+				F584FAED199848D600B85C8D /* DDTTYLogger.m in Sources */,
 				F537E8841993005800E3BBC0 /* MSDBackgroundNode.m in Sources */,
 				F558A0DF1995C64E001D032F /* MSDWallNode.m in Sources */,
 				F56EAA45199660BB008EBE96 /* MSDHudNode.m in Sources */,
+				F584FAC11998385E00B85C8D /* PHBridgePushLinkViewController.m in Sources */,
 				F50D7CA819945410007AF3F8 /* MSDGameplayScene.m in Sources */,
 				F5B00725199709D100D5A9DF /* MSDGameOverNode.m in Sources */,
+				F584FAEF199848D600B85C8D /* DispatchQueueLogFormatter.m in Sources */,
+				F584FAEC199848D600B85C8D /* DDLog.m in Sources */,
 				F537E85E1992FF0100E3BBC0 /* MSDViewController.m in Sources */,
+				F584FAE9199848D600B85C8D /* DDAbstractDatabaseLogger.m in Sources */,
 				F56EAA4819966122008EBE96 /* MSDGameState.m in Sources */,
 				F57C872819950BF400ECA64A /* MSDAsteroidNode.m in Sources */,
+				F584FAC31998385E00B85C8D /* PHBridgeSelectionViewController.m in Sources */,
 				F537E8611992FF0100E3BBC0 /* MSDTitleScene.m in Sources */,
 				F57C87251994FC6A00ECA64A /* MSDProjectileNode.m in Sources */,
 			);
@@ -567,10 +736,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ApigeeCorporation/Downloads/PhilipsHueSDK-iOS-OSX-master",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RockBlaster/RockBlaster-Prefix.pch";
 				INFOPLIST_FILE = "RockBlaster/RockBlaster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -583,10 +757,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ApigeeCorporation/Downloads/PhilipsHueSDK-iOS-OSX-master",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RockBlaster/RockBlaster-Prefix.pch";
 				INFOPLIST_FILE = "RockBlaster/RockBlaster-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
