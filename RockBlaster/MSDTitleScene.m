@@ -10,11 +10,13 @@
 #import "MSDBackgroundNode.h"
 #import "MSDTitleShipNode.h"
 #import "MSDGameplayScene.h"
+#import "MSDAppDelegate.h"
 
 @interface MSDTitleScene ()
 
 @property (nonatomic, retain) MSDBackgroundNode *background;
 @property (nonatomic, retain) MSDTitleShipNode *ship;
+@property (nonatomic, retain) SKLabelNode *hueLinkNode;
 
 @end
 
@@ -46,16 +48,43 @@
         SKAction *fadeSequence = [SKAction repeatActionForever:[SKAction sequence:@[fadeOut, fadeIn]]];
         [self addChild:instructions];
         [instructions runAction:fadeSequence];
-                                                                                                        
+        
+        self.hueLinkNode = [SKLabelNode labelNodeWithFontNamed:@"Orbitron-Regular"];
+        self.hueLinkNode.color = [SKColor whiteColor];
+        self.hueLinkNode.text = @"Link with Hue!";
+        self.hueLinkNode.name = @"LinkHue";
+        self.hueLinkNode.fontSize = title.fontSize / 2;
+        self.hueLinkNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMinY(self.frame) + 40);
+        [self addChild:self.hueLinkNode];
+        [self.hueLinkNode runAction:fadeSequence];
     }
     return self;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    MSDGameplayScene *game = [MSDGameplayScene sceneWithSize:self.frame.size];
-    SKTransition *transition = [SKTransition doorsOpenHorizontalWithDuration:0.5];
-    [self.view presentScene:game transition:transition];
+    BOOL flag = NO;
+    BOOL linking = NO;
+    for (UITouch *touch in touches) {
+        CGPoint locationInNode = [touch locationInNode:self];
+        for (SKNode *node in [self nodesAtPoint:locationInNode]) {
+            if ([node.name isEqualToString:@"LinkHue"]) {
+                MSDAppDelegate *delegate = (MSDAppDelegate *) [[UIApplication sharedApplication] delegate];
+                [delegate searchForBridgeLocal];
+                linking = YES;
+                break;
+            }
+        }
+        if (!linking) {
+            flag = YES;
+        }
+
+    }
+    
+    if (flag) {
+        MSDGameplayScene *game = [MSDGameplayScene sceneWithSize:self.frame.size];
+        SKTransition *transition = [SKTransition doorsOpenHorizontalWithDuration:0.5];
+        [self.view presentScene:game transition:transition];
+    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {

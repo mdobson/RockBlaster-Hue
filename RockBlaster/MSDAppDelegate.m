@@ -114,7 +114,10 @@
         NSLog(@"Connecting to Hue...");
         [self.phHueSDK enableLocalConnectionUsingInterval:10];
     } else {
-        [self searchForBridgeLocal];
+        
+        //This should be user triggered. Not automatic.
+        //[self searchForBridgeLocal];
+        
     }
 }
 
